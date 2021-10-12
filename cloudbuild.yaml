@@ -1,0 +1,15 @@
+substitutions:
+  _GOAPP: '/builder/google-cloud-sdk/platform/google_appengine/goapp'
+  _WORK_DIR: 'global/src/github.com/AkihikoOkubo/gae-go-sample'
+
+steps:
+- name: gcr.io/cloud-builders/docker
+  entrypoint: bash
+  args: ['-c', 'mkdir -p ${_WORK_DIR}']
+  id: mkdir-work-dir
+
+# Deploy
+- name: gcr.io/cloud-builders/gcloud
+  dir: '${_WORK_DIR}'
+  args: ['app', '-q', 'deploy', 'src/main/${_APP_YAML_NAME}', '--promote']
+  id: deploy-app

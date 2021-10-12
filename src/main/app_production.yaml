@@ -1,0 +1,12 @@
+runtime: go116
+service: gae-go-sample
+
+handlers:
+  - url: /.*
+    script: auto
+
+env_variables:
+  APP_APP_PROJECTID: ''
+  APP_FIREBASE_PROJECTID: ''
+  APP_OTHERSERVICE_HOST: ''
+  APP_OTHERSERVICE_AUDIENCE: ''
