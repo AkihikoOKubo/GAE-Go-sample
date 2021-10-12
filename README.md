@@ -1,9 +1,10 @@
 # gae-go-sample
-gae-goでサービスを立ち上げる際に利用できるテンプレートです。
+GAE+Goで簡単なAPIを立ち上げるサンプルです。
 
 ## WHAT
 GAEで簡単なAPIを実行するサンプルです。
-- RuntimeはGo1.17です
+
+- RuntimeはGo116です
 - Firestoreで簡単な読み書きを行うサンプルコードを含みます
 - Cloud Buildでビルド&デプロイできるyamlのサンプルを含みます
 
@@ -65,7 +66,7 @@ GAEサービス間通信で、IAPを使ってセキュアにHTTPリクエスト�
 - IAPを有効化し、/src/main/app_{ENV}.yamlの`APP_OTHERSERVICE_AUDIENCE`にCLIENT_IDを入力する
 - IAMを開き、GAEを実行するサービアカウントにidTokenを発行するロールを付ける
 
-## Testing
+## テストのサンプル
 テストのサンプルを書いてあります。
 1. repositoryのインターフェースを変更した場合は、[mockgen](https://github.com/golang/mock)をインストールしてmockを生成し直してください
 2. `make test`
