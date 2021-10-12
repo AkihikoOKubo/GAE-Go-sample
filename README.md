@@ -64,7 +64,7 @@ Firebase Authenticationを使ってユーザ認証するサンプルがありま
 ## IAP対応
 GAEサービス間通信で、IAPを使ってセキュアにHTTPリクエストするサンプルを書いてあります。試すには、以下の作業が必要です。
 - IAPを有効化し、/src/main/app_{ENV}.yamlの`APP_OTHERSERVICE_AUDIENCE`にCLIENT_IDを入力する
-- IAMを開き、GAEを実行するサービアカウントにidTokenを発行するロールを付ける
+- IAMを開き、GAEを実行するサービアカウントにidTokenを発行できるロール(serviceAccountTokenCreator)を付ける
 
 ## テストのサンプル
 テストのサンプルを書いてあります。
